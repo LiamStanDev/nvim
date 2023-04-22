@@ -16,6 +16,8 @@ g_configs.filter_files = {
 	".DS_Store",
 	".vscode",
 }
+
+-- register tree-sitter code highlight
 g_configs.code_hight_servers = {
 	"json",
 	"javascript",
