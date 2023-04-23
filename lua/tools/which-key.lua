@@ -52,9 +52,8 @@ return function()
 		nowait = true, -- use `nowait` when creating keymaps
 	}
 	local mappings = {
-		-- [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
 		["w"] = { "<cmd>silent! w!<CR>", "Save" }, -- Format command is from lsp/handler
-		W = { "<cmd>silent! wa!<CR>", "Save all" },
+		["W"] = { "<cmd>silent! wa!<CR>", "Save all" },
 		["q"] = { "<cmd>confirm q<CR>", "Quit" },
 		-- ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
 		["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -71,6 +70,7 @@ return function()
 		-- ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
 		[";"] = { ":e $MYVIMRC<CR>", "configuration" },
 		["m"] = { "<Plug>MarkdownPreviewToggle", "Markdown Preview" },
+		["v"] = { "<cmd>vsplit<CR>", "Split" },
 		b = {
 			name = "Browser show",
 			m = { "<Plug>MarkdownPreviewToggle", "Markdown Preview" },
