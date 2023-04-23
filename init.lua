@@ -10,6 +10,9 @@ g_configs.navigator_on = true
 -- set the logo. see ./lua/ui/style/header.lua
 g_configs.dashboard_logo = "AstronautSmall"
 
+-- completion with border
+g_configs.cmp_window_border = "single" -- none, single, rounded
+
 -- file filter for explorer(only for dotfiles)
 g_configs.filter_files = {
 	".git",

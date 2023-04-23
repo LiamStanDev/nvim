@@ -1,5 +1,6 @@
 return function()
 	local cmp = require("cmp")
+	local core = require("core")
 	--   פּ ﯟ   some other good icons
 	local kind_icons = {
 		Namespace = "",
@@ -42,10 +43,32 @@ return function()
 		Copilot = "",
 	}
 
-	local border_opt = {
-		border = "rounded", -- single, rounded
-		winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
-	}
+	local function window_setup()
+		if core.cmp_window_border == "rounded" then
+			local border_opt = {
+				border = "rounded", -- single, rounded
+				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+			}
+			return {
+				completion = require("cmp.config.window").bordered(border_opt),
+				documentation = require("cmp.config.window").bordered(border_opt),
+			}
+		end
+		if core.cmp_window_border == "single" then
+			local border_opt = {
+				border = "single", -- single, rounded
+				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+			}
+			return {
+				completion = require("cmp.config.window").bordered(border_opt),
+				documentation = require("cmp.config.window").bordered(border_opt),
+			}
+		end
+		return {
+			completion = require("cmp.config.window"),
+			documentation = require("cmp.config.window"),
+		}
+	end
 
 	-- find more here: https://www.nerdfonts.com/cheat-sheet
 	cmp.setup({
@@ -67,17 +90,17 @@ return function()
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
 			source_names = {
-				nvim_lsp = "(LSP)",
-				emoji = "(Emoji)",
-				path = "(Path)",
-				calc = "(Calc)",
-				cmp_tabnine = "(Tabnine)",
-				vsnip = "(Snippet)",
-				luasnip = "(Snippet)",
-				buffer = "(Buffer)",
-				tmux = "(TMUX)",
-				copilot = "(Copilot)",
-				treesitter = "(TreeSitter)",
+				-- nvim_lsp = "(LSP)",
+				-- emoji = "(Emoji)",
+				-- path = "(Path)",
+				-- calc = "(Calc)",
+				-- cmp_tabnine = "(Tabnine)",
+				-- vsnip = "(Snippet)",
+				-- luasnip = "(Snippet)",
+				-- buffer = "(Buffer)",
+				-- tmux = "(TMUX)",
+				-- copilot = "(Copilot)",
+				-- treesitter = "(TreeSitter)",
 			},
 			format = function(entry, item)
 				-- Kind icons
@@ -108,8 +131,8 @@ return function()
 			select = false,
 		},
 		window = {
-			completion = require("cmp.config.window").bordered(border_opt),
-			documentation = require("cmp.config.window").bordered(border_opt),
+			completion = window_setup().completion,
+			documentation = window_setup().documentation,
 		},
 		experimental = {
 			ghost_text = false,
