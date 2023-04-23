@@ -103,17 +103,18 @@ return function()
 			},
 			format = function(entry, item)
 				-- Kind icons
-				item.kind = string.format("%s", kind_icons[item.kind])
-				-- item.kind = string.format('%s %s', kind_icons[item.kind], item.kind) -- This concatonates the icons with the name of the item kind
+				item.kind = string.format("%s %s", kind_icons[item.kind], core.cmp_kind_text and item.kind or "")
+
 				if entry.completion_item.detail ~= nil and entry.completion_item ~= "" then
 					item.menu = entry.completion_item.detail
 				else
-					item.menu = ({
-						nvim_lsp = "(LSP)",
-						luasnip = "(Snippet)",
-						buffer = "(Buffer)",
-						path = "(Path)",
-					})[entry.source.name]
+					item.menu = core.cmp_kind_text and ""
+						or ({
+							nvim_lsp = "(LSP)",
+							luasnip = "(Snippet)",
+							buffer = "(Buffer)",
+							path = "(Path)",
+						})[entry.source.name]
 				end
 
 				return require("tailwindcss-colorizer-cmp").formatter(entry, item)
