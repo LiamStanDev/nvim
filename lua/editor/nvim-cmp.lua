@@ -90,17 +90,16 @@ return function()
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
 			source_names = {
-				-- nvim_lsp = "(LSP)",
-				-- emoji = "(Emoji)",
-				-- path = "(Path)",
-				-- calc = "(Calc)",
-				-- cmp_tabnine = "(Tabnine)",
-				-- vsnip = "(Snippet)",
-				-- luasnip = "(Snippet)",
-				-- buffer = "(Buffer)",
-				-- tmux = "(TMUX)",
-				-- copilot = "(Copilot)",
-				-- treesitter = "(TreeSitter)",
+				nvim_lsp = "(LSP)",
+				emoji = "(Emoji)",
+				path = "(Path)",
+				calc = "(Calc)",
+				cmp_tabnine = "(Tabnine)",
+				vsnip = "(Snippet)",
+				luasnip = "(Snippet)",
+				buffer = "(Buffer)",
+				tmux = "(TMUX)",
+				copilot = "(Copilot)",
 			},
 			format = function(entry, item)
 				-- Kind icons
@@ -122,9 +121,12 @@ return function()
 		},
 		sources = {
 			{ name = "nvim_lsp" },
+			{ name = "nvim_lua" },
 			{ name = "luasnip" },
 			{ name = "buffer" },
 			{ name = "path" },
+			{ name = "emoji" }, -- input ":" then the menu shows up
+			{ name = "calc" },
 		},
 		confirm_opts = {
 			behavior = cmp.ConfirmBehavior.Replace,
