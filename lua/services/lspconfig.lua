@@ -17,8 +17,13 @@ return function()
 		keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 		keymap(bufnr, "n", "<space>na", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
 		keymap(bufnr, "n", "<space>nd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-		keymap(bufnr, "n", "<space>nl", "<cmd>lua vim.notify(vim.inspect(vim.lsp.buf.list_workspace_folders()), 'Info')<CR>", opts)
-
+		keymap(
+			bufnr,
+			"n",
+			"<space>nl",
+			"<cmd>lua vim.notify(vim.inspect(vim.lsp.buf.list_workspace_folders()), 'Info')<CR>",
+			opts
+		)
 
 		-- Format
 		vim.cmd([[command! Format execute "lua vim.lsp.buf.format({ async = true })" ]]) -- Format command
