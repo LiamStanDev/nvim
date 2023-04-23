@@ -11,7 +11,7 @@ local M = {
 		-- component_separators = "",
 		-- section_separators = "",
 		disabled_filetypes = {
-			statusline = { "alpha", "neo-tree" },
+			statusline = { "alpha" }, -- "neo-tree"
 			winbar = {},
 		},
 		always_divide_middle = true,
