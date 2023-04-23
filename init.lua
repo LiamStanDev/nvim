@@ -1,27 +1,30 @@
 -- the core plugins
-local g_configs = require("core")
+local g = require("core")
 
 -- set color theme here
-g_configs.colorscheme = "tokyonight-night"
+g.colorscheme = "onedark"
 
 -- whether to see navigator bar in the top
-g_configs.navigator_on = true
+g.navigator_on = true
 
 -- set the logo. see ./lua/ui/style/header.lua
-g_configs.dashboard_logo = "AstronautSmall"
+g.dashboard_logo = "AstronautSmall"
 
 -- completion with border
-g_configs.cmp_window_border = "single" -- none, single, rounded
+g.cmp_window_border = "rounded" -- none, single, rounded
+
+-- completion menu with text
+g.cmp_kind_text = true
 
 -- file filter for explorer(only for dotfiles)
-g_configs.filter_files = {
+g.filter_files = {
 	".git",
 	".DS_Store",
 	".vscode",
 }
 
 -- register tree-sitter code highlight
-g_configs.code_hight_servers = {
+g.code_hight_servers = {
 	"json",
 	"javascript",
 	"tsx",
@@ -37,7 +40,7 @@ g_configs.code_hight_servers = {
 	"c_sharp",
 }
 -- register lsp server for auto completion
-g_configs.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
+g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"tsserver",
 	"tailwindcss",
 	"omnisharp",
@@ -58,7 +61,7 @@ g_configs.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig
 }
 
 -- register formatting and diagnostics server
-g_configs.null_ls_servers = {
+g.null_ls_servers = {
 	"prettier",
 	"black", -- python formatter
 	"stylua", -- lua formatter
@@ -72,7 +75,7 @@ g_configs.null_ls_servers = {
 }
 
 -- register debuger server
-g_configs.dap_servers = {
+g.dap_servers = {
 	"coreclr", -- csharp
 	"python",
 	"codelldb",
