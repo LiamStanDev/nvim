@@ -45,7 +45,7 @@ return function()
 			vim.lsp.buf.signature_help()
 		end, { silent = true, noremap = true, desc = "toggle signature" })
 		-- remove server formatter
-		if client.name ~= "lemminx" then
+		if client.name ~= "lemminx" and client.name ~= "rust_analyzer" then
 			client.server_capabilities.documentFormattingProvider = false
 			client.server_capabilities.documentRangeFormattingProvider = false
 		end

@@ -45,7 +45,7 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"tailwindcss",
 	"omnisharp",
 	-- "csharp_ls",
-	"rust_analyzer",
+	"rust_analyzer", -- rust lsp and formatter
 	"html",
 	"jsonls",
 	"lua_ls",
@@ -68,7 +68,6 @@ g.null_ls_servers = {
 	"beautysh", -- bash formatter
 	"csharpier", -- csharp formatter
 	"eslint_d",
-	"rustfmt", -- rust formatter
 	"clippy", -- rust linter
 	"prismaFmt",
 	"gofmt",
