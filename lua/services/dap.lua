@@ -2,7 +2,7 @@ local M = {}
 M.init = function()
 	-- sign
 	vim.fn.sign_define("DapBreakpoint", {
-		text = "",
+		text = "", --"",
 		texthl = "DiagnosticSignError",
 		linehl = "",
 		numhl = "",
@@ -22,11 +22,11 @@ M.init = function()
 end
 
 M.config = function()
-	local server = require("core").dap_servers
+	local servers = require("core").dap_servers
 
 	require("dap")
 	require("mason-nvim-dap").setup({
-		ensure_installed = server,
+		ensure_installed = servers,
 		automatic_installation = true,
 		handlers = {
 			function(config)

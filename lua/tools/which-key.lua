@@ -1,5 +1,6 @@
 return function()
 	local which_key = require("which-key")
+	local core = require("core")
 
 	which_key.setup({
 		icons = {
@@ -13,11 +14,11 @@ return function()
 			scroll_up = "<c-u>", -- binding to scroll up inside the popup
 		},
 		window = {
-			border = "single", -- none, single, double, shadow
+			border = core.which_key_window_border, -- none, single, double, shadow
 			position = "bottom", -- bottom, top
-			-- margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+			margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
 			padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
-			winblend = 5,
+			winblend = 0,
 		},
 		layout = {
 			height = { min = 4, max = 25 }, -- min and max height of the columns
