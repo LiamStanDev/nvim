@@ -62,13 +62,14 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 
 -- register formatting and diagnostics server
 g.null_ls_servers = {
-	"prettier",
+	"prettierd",
+	-- "prettier",
 	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
 	"csharpier", -- csharp formatter
-	"eslint",
-	-- "eslint_d",
+	-- "eslint",
+	"eslint_d",
 	"clippy", -- rust linter
 	"prismaFmt",
 	"gofmt",
