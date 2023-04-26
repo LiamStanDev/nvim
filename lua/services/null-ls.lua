@@ -26,19 +26,18 @@ return function()
 		local linter_ok, linter = pcall(require, "null-ls.builtins.diagnostics." .. server)
 		if linter_ok then
 			-- see: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md
+			local linter_set = linter
+
 			if server == "eslint_d" or server == "eslint" then
-				table.insert(
-					sources,
-					linter.with({
-						-- ignore prettier warnings from eslint-plugin-prettier
-						filter = function(diagnostic)
-							return diagnostic.code ~= "prettier/prettier"
-						end,
-					})
-				)
-			else
-				table.insert(sources, linter)
+				linter_set = linter.with({
+					disabled_filetypes = { "javascript" },
+					-- ignore prettier warnings from eslint-plugin-prettier
+					filter = function(diagnostic)
+						return diagnostic.code ~= "prettier/prettier"
+					end,
+				})
 			end
+			table.insert(sources, linter_set)
 		end
 	end
 	require("null-ls").setup({
