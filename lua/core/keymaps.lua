@@ -14,8 +14,10 @@ local insert_mode = {
 
 local normal_mode = {
 	-- Quick Curser
-	["<S-j>"] = "10j",
-	["<S-k>"] = "10k",
+	["<S-j>"] = "5j",
+	["<S-k>"] = "5k",
+	["<S-h>"] = "^",
+	["<S-l>"] = "$",
 	-- Better window movement
 	["<C-h>"] = "<C-w>h",
 	["<C-j>"] = "<C-w>j",
@@ -33,8 +35,8 @@ local normal_mode = {
 	["<A-k>"] = ":m .-2<CR>==",
 
 	-- Buffer Navigate
-	["<S-l>"] = ":bnext<CR>",
-	["<S-h>"] = ":bprevious<CR>",
+	["<A-l>"] = ":bnext<CR>",
+	["<A-h>"] = ":bprevious<CR>",
 
 	-- black hole
 	["x"] = '"_x',
@@ -45,6 +47,10 @@ local visual_mode = {
 	["<"] = "<gv",
 	[">"] = ">gv",
 	["x"] = '"_x',
+	["<S-h>"] = "^",
+	["<S-l>"] = "$",
+	["<S-j>"] = "5j",
+	["<S-k>"] = "5k",
 	-- ["p"] = '"0p',
 	-- ["P"] = '"0P',
 }
@@ -53,6 +59,8 @@ local visual_block_mode = {
 	-- Move current line / block with Alt-j/k ala vscode.
 	["<A-j>"] = ":m '>+1<CR>gv-gv",
 	["<A-k>"] = ":m '<-2<CR>gv-gv",
+	["<S-j>"] = "5j",
+	["<S-k>"] = "5k",
 }
 
 local command_mode = {
