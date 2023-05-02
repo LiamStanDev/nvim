@@ -11,7 +11,7 @@ g.navigator_on = true
 g.dashboard_logo = "AstronautSmall"
 
 -- border style
-g.cmp_window_border = "rounded" -- none, single, rounded
+g.cmp_window_border = "single" -- none, single, rounded
 g.which_key_window_border = "single" -- none, single, double, shadow
 
 -- completion menu with text
