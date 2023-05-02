@@ -53,6 +53,8 @@ local visual_mode = {
 	["<S-k>"] = "5k",
 	-- ["p"] = '"0p',
 	-- ["P"] = '"0P',
+	["<S-l>"] = "$",
+	["<S-h>"] = "^",
 }
 
 local visual_block_mode = {
