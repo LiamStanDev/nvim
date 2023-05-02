@@ -12,6 +12,7 @@ return function()
 				return true
 			end
 		end,
+		additional_vim_regex_highlighting = false,
 		context_commentstring = {
 			enable = true,
 		},
