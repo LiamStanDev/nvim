@@ -48,7 +48,7 @@ return function()
 		mode = "n", -- NORMAL mode
 		prefix = "<leader>",
 		buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-		silent = true, -- use `silent` when creating keymaps
+		silent = false, -- use `silent` when creating keymaps
 		noremap = false, -- use `noremap` when creating keymaps
 		nowait = true, -- use `nowait` when creating keymaps
 	}
@@ -72,6 +72,10 @@ return function()
 		[";"] = { ":e $MYVIMRC<CR>", "configuration" },
 		["m"] = { "<Plug>MarkdownPreviewToggle", "Markdown Preview" },
 		["v"] = { "<cmd>vsplit<CR>", "Split" },
+		r = {
+			":%s/",
+			"Find and Replace in a word",
+		},
 		b = {
 			name = "Browser show",
 			m = { "<Plug>MarkdownPreviewToggle", "Markdown Preview" },
