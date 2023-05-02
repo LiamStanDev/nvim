@@ -2,7 +2,7 @@ local cache_dir = vim.env.HOME .. "/.cache/nvim/"
 
 local options = {
 	-- line number
-	relativenumber = false,
+	relativenumber = true,
 	number = true,
 
 	-- indentation
