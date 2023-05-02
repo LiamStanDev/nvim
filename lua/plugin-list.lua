@@ -28,6 +28,7 @@ M.plugins = {
 	{
 		"morhetz/gruvbox",
 	},
+	{ "rose-pine/neovim", name = "rose-pine" },
 
 	-- -- uitl plugins
 	{ "nvim-lua/plenary.nvim", lazy = true },

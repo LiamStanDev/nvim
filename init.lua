@@ -3,7 +3,7 @@ local g = require("core")
 
 -- set color theme here
 g.colorscheme = "onedark"
-
+g.transparent = true
 -- whether to see navigator bar in the top
 g.navigator_on = true
 
