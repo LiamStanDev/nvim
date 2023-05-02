@@ -16,8 +16,9 @@ local normal_mode = {
 	-- Quick Curser
 	["<S-j>"] = "5j",
 	["<S-k>"] = "5k",
-	["<S-h>"] = "^",
 	["<S-l>"] = "$",
+	["<S-h>"] = "^",
+
 	-- Better window movement
 	["<C-h>"] = "<C-w>h",
 	["<C-j>"] = "<C-w>j",
@@ -61,8 +62,8 @@ local visual_block_mode = {
 	-- Move current line / block with Alt-j/k ala vscode.
 	["<A-j>"] = ":m '>+1<CR>gv-gv",
 	["<A-k>"] = ":m '<-2<CR>gv-gv",
-	["<S-j>"] = "5j",
-	["<S-k>"] = "5k",
+	["<S-l>"] = "$",
+	["<S-h>"] = "^",
 }
 
 local command_mode = {
