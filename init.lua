@@ -10,8 +10,9 @@ g.navigator_on = true
 -- set the logo. see ./lua/ui/style/header.lua
 g.dashboard_logo = "AstronautSmall"
 
--- completion with border
-g.cmp_window_border = "rounded" -- none, single, rounded
+-- border style
+g.cmp_window_border = "single" -- none, single, rounded
+g.which_key_window_border = "single" -- none, single, double, shadow
 
 -- completion menu with text
 g.cmp_kind_text = true
