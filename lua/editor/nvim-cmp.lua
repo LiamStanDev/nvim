@@ -130,7 +130,7 @@ return function()
 			{ name = "calc" },
 		},
 		confirm_opts = {
-			behavior = cmp.ConfirmBehavior.Replace,
+			-- behavior = cmp.ConfirmBehavior.Replace,
 			select = false,
 		},
 		window = {
@@ -143,15 +143,19 @@ return function()
 		},
 	})
 	-- nvim dap-cmp
-	require("cmp").setup({
+	cmp.setup({
 		enabled = function()
 			return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or require("cmp_dap").is_dap_buffer()
 		end,
 	})
 
-	require("cmp").setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
+	cmp.setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
 		sources = {
 			{ name = "dap" },
 		},
 	})
+
+	-- Add parentheses after selecting function or method
+	local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 end
