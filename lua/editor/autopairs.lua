@@ -33,9 +33,4 @@ return function()
 			highlight_grey = "Comment",
 		},
 	})
-
-	local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-	local cmp = require("cmp")
-	-- Add parentheses after selecting function or method
-	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 end
