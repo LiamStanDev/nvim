@@ -172,13 +172,15 @@ return function()
 			-- 	"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			-- 	"Workspace Symbols",
 			-- },
+
 			e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
 			o = { "<cmd>Lspsaga outline<CR>", "Outline" },
 			-- o = { "<cmd>SymbolsOutline<CR>", "Outline" },
 		},
 		s = {
 			name = "Search",
-			b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+			b = { "<cmd>Telescope buffers<cr>", "Checkout branch" },
+			B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 			c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 			f = { "<cmd>Telescope find_files<cr>", "Find File" },
 			n = { "<cmd>Telescope notify<cr>", "Notify History" },
