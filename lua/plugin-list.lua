@@ -3,6 +3,7 @@ local M = {}
 M.plugins = {
 	-- colorscheme
 	{ "olimorris/onedarkpro.nvim", opts = { options = { transparency = true } } },
+	-- { "navarasu/onedark.nvim", opts = { style = "darker", transparent = true } },
 	{ "folke/tokyonight.nvim", opts = { transparent = true } },
 	{
 		"catppuccin/nvim",
@@ -28,7 +29,12 @@ M.plugins = {
 	{
 		"morhetz/gruvbox",
 	},
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{
+		"rebelot/kanagawa.nvim",
+	},
+	{
+		"sainnhe/sonokai",
+	},
 
 	-- -- uitl plugins
 	{ "nvim-lua/plenary.nvim", lazy = true },
@@ -203,7 +209,8 @@ M.plugins = {
 
 	-- buffer tab
 	{ "akinsho/bufferline.nvim", config = require("ui.bufferline") },
-	{ "moll/vim-bbye" }, -- can delete buffers (close files)
+	-- { "moll/vim-bbye" }, -- can delete buffers (close files)
+	{ "famiu/bufdelete.nvim", event = "VeryLazy" },
 
 	-- for select and input ui
 	{
