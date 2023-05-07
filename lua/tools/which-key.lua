@@ -141,7 +141,7 @@ return function()
 			a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
 			p = { "<cmd>Lspsaga peek_definition<CR>", "Peek Definition" },
 			b = { "<cmd>Lspsaga show_buf_diagnostics<cr>", "Buffer Diagnostics" },
-			w = { "<cmd>Lspsaga show_workspace_diagnostics<cr>", "Workspace Diagnostics" },
+			-- w = { "<cmd>Lspsaga show_workspace_diagnostics<cr>", "Workspace Diagnostics" },
 			R = { "<cmd>LspRestart<Cr>", "Lsp Restart" },
 			j = {
 				"<cmd>Lspsaga diagnostic_jump_next<cr>",
@@ -163,7 +163,7 @@ return function()
 				end,
 				"Prev Error",
 			},
-			-- w = { "<cmd>Telescope diagnostic<CR>", "Workspace Diagnostics" },
+			w = { "<cmd>Troble<CR>", "Workspace Diagnostics" },
 			-- l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 			-- q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 			r = { "<cmd>Lspsaga rename ++project<cr>", "Rename" },
@@ -175,7 +175,6 @@ return function()
 
 			e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
 			o = { "<cmd>Lspsaga outline<CR>", "Outline" },
-			-- o = { "<cmd>SymbolsOutline<CR>", "Outline" },
 		},
 		s = {
 			name = "Search",
