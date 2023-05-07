@@ -110,6 +110,7 @@ M.plugins = {
 			-- { "p00f/nvim-ts-rainbow" }, -- rainbow brasket for treesitter extension
 			{ "JoosepAlviste/nvim-ts-context-commentstring" },
 			{ "windwp/nvim-ts-autotag", config = require("editor.autotag") },
+			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 	},
 
@@ -307,6 +308,16 @@ M.plugins = {
 		},
 		event = { "BufReadPost", "BufNewFile" },
 		config = require("tools.neoai"),
+	},
+
+	-- surround
+	{
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
 	},
 }
 
