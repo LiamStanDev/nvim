@@ -163,7 +163,7 @@ return function()
 				end,
 				"Prev Error",
 			},
-			w = { "<cmd>Troble<CR>", "Workspace Diagnostics" },
+			-- w = { "<cmd>Telescope diagnostic<CR>", "Workspace Diagnostics" },
 			-- l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 			-- q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 			r = { "<cmd>Lspsaga rename ++project<cr>", "Rename" },

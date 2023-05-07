@@ -316,15 +316,8 @@ M.plugins = {
 		version = "*",
 		event = "VeryLazy",
 		config = function()
-			require("nvim-surround").setup()
+			require("nvim-surround").setup({})
 		end,
-	},
-
-	-- diagnostic navigation
-	{
-		"folke/trouble.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = require("tools.troble"),
 	},
 }
 
