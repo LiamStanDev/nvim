@@ -34,4 +34,10 @@ return function()
 			highlight_grey = "Comment",
 		},
 	})
+	-- add rules
+	-- for virtual segment
+	local Rule = require("nvim-autopairs.rule")
+	npairs.add_rules({
+		Rule("<>", "</>", { "typescriptreact", "javascriptreact" }),
+	})
 end
