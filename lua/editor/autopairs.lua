@@ -1,5 +1,6 @@
 return function()
-	require("nvim-autopairs").setup({
+	local npairs = require("nvim-autopairs")
+	npairs.setup({
 		active = true,
 		on_config_done = nil,
 		map_char = {
@@ -32,5 +33,11 @@ return function()
 			highlight = "Search",
 			highlight_grey = "Comment",
 		},
+	})
+	-- add rules
+	-- for virtual segment
+	local Rule = require("nvim-autopairs.rule")
+	npairs.add_rules({
+		Rule("<>", "</>", { "typescriptreact", "javascriptreact" }),
 	})
 end
