@@ -43,7 +43,11 @@ M.plugins = {
 	{ "numToStr/Comment.nvim", event = { "BufNewFile", "BufReadPre" }, config = require("editor.comment") },
 
 	-- -- auto autopairs
+	-- need both of these two
+	-- for method auto pairs
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = require("editor.autopairs") },
+	-- for every auto pairs
+	{ "m4xshen/autoclose.nvim", event = "InsertEnter", config = require("editor.autoclose") },
 
 	-- for text highlight
 	{
@@ -82,10 +86,12 @@ M.plugins = {
 			"rcarriga/cmp-dap",
 			{
 				"L3MON4D3/LuaSnip",
+				version = "<CurrentMajor>.*",
 				dependencies = {
 					"rafamadriz/friendly-snippets",
 				},
 				config = require("editor.luasnippet"),
+				build = "make install_jsregexp",
 			},
 			{
 				"roobert/tailwindcss-colorizer-cmp.nvim",
@@ -181,9 +187,9 @@ M.plugins = {
 
 	-- lsp ui
 	{
-		"nvimdev/lspsaga.nvim",
+		"glepnir/lspsaga.nvim",
 		event = "LspAttach",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" },
 		config = require("ui.lspsaga"),
 	},
 
