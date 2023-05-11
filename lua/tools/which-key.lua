@@ -68,7 +68,7 @@ return function()
 		["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 		["e"] = { "<cmd>Neotree toggle<CR>", "Explorer" },
 		-- ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
-		[";"] = { ":e $MYVIMRC<CR>", "configuration" },
+		[";"] = { ":e $MYVIMRC<CR>", "Configuration" },
 		["m"] = { "<Plug>MarkdownPreviewToggle", "Markdown Preview" },
 		["v"] = { "<cmd>vsplit<CR>", "Split" },
 		b = {
@@ -158,7 +158,7 @@ return function()
 				end,
 				"Prev Error",
 			},
-			w = { "<cmd>Troble<CR>", "Workspace Diagnostics" },
+			w = { "<cmd>Trouble<CR>", "Workspace Diagnostics" },
 			-- l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 			-- q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 			r = { "<cmd>Lspsaga rename ++project<cr>", "Rename" },
