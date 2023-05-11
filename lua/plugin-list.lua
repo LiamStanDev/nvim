@@ -47,7 +47,7 @@ M.plugins = {
 	-- for method auto pairs
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = require("editor.autopairs") },
 	-- for every auto pairs
-	{ "m4xshen/autoclose.nvim", event = "InsertEnter", config = require("editor.autoclose") },
+	-- { "m4xshen/autoclose.nvim", event = "InsertEnter", config = require("editor.autoclose") },
 
 	-- for text highlight
 	{
