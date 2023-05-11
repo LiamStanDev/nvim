@@ -10,22 +10,22 @@ return function()
 	-- set behavior for specific buffer
 	local function on_attach(client, bufnr)
 		-- set keymap
-		local opts = { noremap = true, silent = true }
-		local keymap = vim.api.nvim_buf_set_keymap
-		keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-		keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+		-- local opts = { noremap = true, silent = true }
+		-- local keymap = vim.api.nvim_buf_set_keymap
+		-- keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+		-- keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 		-- keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-		keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
+		-- keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
 
-		keymap(bufnr, "n", "<space>na", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-		keymap(bufnr, "n", "<space>nd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-		keymap(
-			bufnr,
-			"n",
-			"<space>nl",
-			"<cmd>lua vim.notify(vim.inspect(vim.lsp.buf.list_workspace_folders()), 'Info')<CR>",
-			opts
-		)
+		-- keymap(bufnr, "n", "<space>na", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+		-- keymap(bufnr, "n", "<space>nd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+		-- keymap(
+		-- 	bufnr,
+		-- 	"n",
+		-- 	"<space>nl",
+		-- 	"<cmd>lua vim.notify(vim.inspect(vim.lsp.buf.list_workspace_folders()), 'Info')<CR>",
+		-- 	opts
+		-- )
 
 		-- Format
 		vim.cmd([[command! Format execute "lua vim.lsp.buf.format({ async = true })" ]]) -- Format command
