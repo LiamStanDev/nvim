@@ -1,6 +1,34 @@
 return function()
 	local g_config = require("core")
 	require("lspsaga").setup({
+		ui = {
+			-- This option only works in Neovim 0.9
+			title = true,
+			-- Border type can be single, double, rounded, solid, shadow.
+			border = "rounded",
+			winblend = 0,
+			expand = "",
+			collapse = "",
+			code_action = "💡",
+			incoming = " ",
+			outgoing = " ",
+			hover = " ",
+			kind = { ["Folder"] = { " ", "@comment" } },
+		},
+		finder = {
+			max_height = 0.5,
+			min_width = 30,
+			force_max_height = false,
+			keys = {
+				expand_or_jump = "<CR>",
+				vsplit = "v",
+				split = "i",
+				tabe = "t",
+				tabnew = "r",
+				quit = { "<C-c>" },
+				close_in_preview = "<ESC>",
+			},
+		},
 		symbol_in_winbar = {
 			enable = g_config.navigator_on,
 			separator = " ",
@@ -23,7 +51,7 @@ return function()
 			custom_sort = nil,
 			keys = {
 				expand_or_jump = "<CR>",
-				quit = "q",
+				quit = "<C-c>",
 			},
 		},
 		code_action = {
@@ -32,14 +60,14 @@ return function()
 			extend_gitsigns = true,
 			keys = {
 				-- string | table type
-				quit = "q",
+				quit = "<C-c>",
 				exec = "<CR>",
 			},
 		},
 		rename = {
 			quit = "<C-c>",
 			exec = "<CR>",
-			mark = "x",
+			mark = "<TAB>",
 			confirm = "<CR>",
 			in_select = true,
 		},
@@ -54,11 +82,10 @@ return function()
 	local keymap = vim.keymap.set
 	-- C-t: go back
 	keymap("n", "gD", "<cmd>Lspsaga peek_definition<CR>")
-	-- keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
-	-- keymap("n", "gd", "<cmd>Lspsaga lsp_finder<CR>")
 	-- Go to definition
 	keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 
+	keymap("n", "gr", "<cmd>Lspsaga lsp_finder<CR>")
 	-- Peek type definition
 	-- You can edit the file containing the type definition in the floating window
 	-- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
