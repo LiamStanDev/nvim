@@ -5,7 +5,7 @@ return function()
 			-- This option only works in Neovim 0.9
 			title = true,
 			-- Border type can be single, double, rounded, solid, shadow.
-			border = "rounded",
+			border = "single",
 			winblend = 0,
 			expand = "",
 			collapse = "",
@@ -25,7 +25,7 @@ return function()
 				split = "i",
 				tabe = "t",
 				tabnew = "r",
-				quit = { "<C-c>" },
+				quit = { "<C-c>", "q" },
 				close_in_preview = "<ESC>",
 			},
 		},
