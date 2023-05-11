@@ -1,0 +1,18 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": "rust",
+        "path": "./rust.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": "cs",
+        "path": "./cs.json"
+      }
+    ]
+  }
+}
