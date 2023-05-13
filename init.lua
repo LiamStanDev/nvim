@@ -39,6 +39,8 @@ g.code_hight_servers = {
 	"dockerfile",
 	"gitignore",
 	"c_sharp",
+	"rust",
+	"sql",
 }
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
@@ -58,6 +60,7 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"taplo", -- toml lsp
 	"lemminx", -- xml lsp
 	"prismals",
+	"rust_analyzer",
 	"gopls",
 }
 
@@ -70,7 +73,6 @@ g.null_ls_servers = {
 	"csharpier", -- csharp formatter
 	"eslint_d",
 	"rustfmt", -- rust formatter
-	"clippy", -- rust linter
 	"prismaFmt",
 	"gofmt",
 }
