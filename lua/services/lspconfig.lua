@@ -33,6 +33,7 @@ return function()
 		vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 
 		-- add some plugin
+		require("lsp-inlayhints").on_attach(client, bufnr)
 		require("illuminate").on_attach(client)
 		require("lsp_signature").on_attach({
 			-- plugin for parameter hint

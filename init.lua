@@ -14,6 +14,10 @@ g.dashboard_logo = "AstronautSmall"
 g.cmp_window_border = "single" -- none, single, rounded
 g.which_key_window_border = "single" -- none, single, double, shadow
 
+-- show inline hint
+g.open_type_hint = true -- for variable
+g.open_parameter_hint = false
+
 -- completion menu with text
 g.cmp_kind_text = true
 

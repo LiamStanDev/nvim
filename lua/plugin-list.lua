@@ -332,6 +332,7 @@ M.plugins = {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = require("tools.troble"),
 	},
+	{ "lvimuser/lsp-inlayhints.nvim", config = require("tools.inline-hint") },
 }
 
 return M
