@@ -306,16 +306,6 @@ M.plugins = {
 		config = require("tools.live-server"),
 	},
 
-	-- chatGPT
-	{
-		"Bryley/neoai.nvim",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
-		event = { "BufReadPost", "BufNewFile" },
-		config = require("tools.neoai"),
-	},
-
 	-- surround
 	{
 		"kylechui/nvim-surround",
@@ -332,7 +322,35 @@ M.plugins = {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = require("tools.troble"),
 	},
-	{ "lvimuser/lsp-inlayhints.nvim", config = require("tools.inline-hint") },
+	-- inline hint
+	{
+		"lvimuser/lsp-inlayhints.nvim",
+		event = "LspAttach",
+		config = require("tools.inline-hint"),
+	},
+
+	-- chatGPT
+	-- {
+	-- 	"Bryley/neoai.nvim",
+	-- 	dependencies = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 	},
+	-- 	event = { "BufReadPost", "BufNewFile" },
+	-- 	config = require("tools.neoai"),
+	-- },
+	{
+		"jackMort/ChatGPT.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("chatgpt").setup()
+			-- require("tools.chatGPT")
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	},
 }
 
 return M
