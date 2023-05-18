@@ -11,8 +11,12 @@ g.navigator_on = true
 g.dashboard_logo = "AstronautSmall"
 
 -- border style
-g.cmp_window_border = "single" -- none, single, rounded
-g.which_key_window_border = "single" -- none, single, double, shadow
+g.cmp_window_border = "rounded" -- none, single, rounded
+g.which_key_window_border = "rounded" -- none, single, double, shadow
+
+-- show inline hint
+g.open_type_hint = true -- for variable
+g.open_parameter_hint = false
 
 -- completion menu with text
 g.cmp_kind_text = true
@@ -39,14 +43,15 @@ g.code_hight_servers = {
 	"dockerfile",
 	"gitignore",
 	"c_sharp",
+	"rust",
+	"sql",
 }
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"tsserver",
 	"tailwindcss",
 	"omnisharp",
-	-- "csharp_ls",
-	"rust_analyzer", -- rust lsp and formatter
+	"rust_analyzer",
 	"html",
 	"jsonls",
 	"lua_ls",
@@ -58,6 +63,7 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"taplo", -- toml lsp
 	"lemminx", -- xml lsp
 	"prismals",
+	"rust_analyzer",
 	"gopls",
 }
 
@@ -71,7 +77,7 @@ g.null_ls_servers = {
 	"csharpier", -- csharp formatter
 	-- "eslint",
 	"eslint_d",
-	"clippy", -- rust linter
+	"rustfmt", -- rust formatter
 	"prismaFmt",
 	"gofmt",
 }
@@ -81,6 +87,8 @@ g.dap_servers = {
 	"coreclr", -- csharp
 	"python",
 	"codelldb",
+	-- "cppdbg",
+	"delve", -- go
 }
 
 -- setup all plugin

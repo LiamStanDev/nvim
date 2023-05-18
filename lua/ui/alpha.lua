@@ -1,3 +1,12 @@
+local function get_plugins_num()
+	return #require("plugin-list")
+		+ #require("colorschemes")
+		+ #require("editor.plugins")
+		+ #require("services.plugins")
+		+ #require("tools.plugins")
+		+ #require("ui.plugins")
+end
+
 return function()
 	local alpha_status, alpha = pcall(require, "alpha")
 	if not alpha_status then
@@ -24,7 +33,7 @@ return function()
 	}
 	local function footer()
 		-- Number of plugins
-		local total_plugins = #require("plugin-list").plugins
+		local total_plugins = get_plugins_num()
 		local datetime = os.date("%d-%m-%Y %H:%M:%S")
 		local plugins_text = "\n\n"
 			.. "⚡"
