@@ -1,7 +1,7 @@
 return function()
 	local npairs = require("nvim-autopairs")
 	npairs.setup({
-		active = true,
+		active = false,
 		on_config_done = nil,
 		map_char = {
 			all = "(",
@@ -24,7 +24,7 @@ return function()
 		disable_in_visualblock = false,
 		fast_wrap = {
 			map = "<M-e>",
-			chars = { "{", "[", "(", '"', "'" },
+			chars = { "{", "[", "(", '"', "'", "|" },
 			pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
 			offset = 0, -- Offset from pattern match
 			end_key = "$",

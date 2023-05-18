@@ -5,6 +5,9 @@ return {
 				enable = true,
 			},
 			checkOnSave = true,
+			cargo = {
+				allFeatures = true,
+			},
 		},
 	},
 }

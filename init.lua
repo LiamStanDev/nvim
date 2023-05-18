@@ -11,8 +11,8 @@ g.navigator_on = true
 g.dashboard_logo = "AstronautSmall"
 
 -- border style
-g.cmp_window_border = "single" -- none, single, rounded
-g.which_key_window_border = "single" -- none, single, double, shadow
+g.cmp_window_border = "rounded" -- none, single, rounded
+g.which_key_window_border = "rounded" -- none, single, double, shadow
 
 -- show inline hint
 g.open_type_hint = true -- for variable
@@ -51,7 +51,6 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"tsserver",
 	"tailwindcss",
 	"omnisharp",
-	-- "csharp_ls",
 	"rust_analyzer",
 	"html",
 	"jsonls",
@@ -86,6 +85,8 @@ g.dap_servers = {
 	"coreclr", -- csharp
 	"python",
 	"codelldb",
+	-- "cppdbg",
+	"delve", -- go
 }
 
 -- setup all plugin

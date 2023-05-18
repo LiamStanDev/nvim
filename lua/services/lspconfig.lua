@@ -51,6 +51,7 @@ return function()
 		if client.name ~= "lemminx" then
 			client.server_capabilities.documentFormattingProvider = false
 			client.server_capabilities.documentRangeFormattingProvider = false
+			client.resolved_capabilities.document_formatting = false
 		end
 		if client.name == "omnisharp" then
 			client.server_capabilities.semanticTokensProvider = nil
@@ -86,7 +87,7 @@ return function()
 			on_attach = on_attach,
 		}
 		-- find ./setting
-		local require_ok, conf_opts = pcall(require, "services.settings." .. server) -- for the settings folder
+		local require_ok, conf_opts = pcall(require, "services.lsp-settings." .. server) -- for the settings folder
 		if require_ok then
 			opts = vim.tbl_deep_extend("force", conf_opts, opts)
 		end
@@ -108,6 +109,7 @@ return function()
 
 	vim.diagnostic.config({
 		virtual_text = { spacing = 2, prefix = "●" }, -- show diagnostic after your code
+		-- virtual_text = false,
 		signs = {
 			active = signs, -- show signs
 		},

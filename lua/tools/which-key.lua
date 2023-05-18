@@ -52,6 +52,7 @@ return function()
 		nowait = true, -- use `nowait` when creating keymaps
 	}
 	local mappings = {
+		["<space>"] = { "<cmd>HopWord<CR>", "Hop Word" },
 		["w"] = { "<cmd>silent! w!<CR>", "Save" }, -- Format command is from lsp/handler
 		["W"] = { "<cmd>silent! wa!<CR>", "Save all" },
 		["q"] = { "<cmd>confirm q<CR>", "Quit" },
@@ -91,7 +92,16 @@ return function()
 			O = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
 			p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
 			r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
-			s = { "<cmd>lua require'dap'.continue()<CR>", "Start" },
+			s = {
+				function()
+					if vim.api.nvim_buf_get_option(0, "filetype") == "rust" then
+						vim.api.nvim_command("RustDebuggables")
+					else
+						vim.api.nvim_command("lua require'dap'.continue()")
+					end
+				end,
+				"Start",
+			},
 			U = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
 		},
 		p = {

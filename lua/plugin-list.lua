@@ -43,11 +43,9 @@ M.plugins = {
 	{ "numToStr/Comment.nvim", event = { "BufNewFile", "BufReadPre" }, config = require("editor.comment") },
 
 	-- -- auto autopairs
-	-- need both of these two
 	-- for method auto pairs
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = require("editor.autopairs") },
-	-- for every auto pairs
-	-- { "m4xshen/autoclose.nvim", event = "InsertEnter", config = require("editor.autoclose") },
+	{ "m4xshen/autoclose.nvim", event = "InsertEnter", config = require("editor.autoclose") },
 
 	-- for text highlight
 	{
@@ -91,10 +89,10 @@ M.plugins = {
 					"rafamadriz/friendly-snippets",
 				},
 				config = require("editor.luasnippet"),
-				build = "make install_jsregexp",
 			},
 			{
 				"roobert/tailwindcss-colorizer-cmp.nvim",
+				ft = { "html", "typescript", "typescriptreact", "javascript", "css", "javascriptreact" },
 				config = function()
 					require("tailwindcss-colorizer-cmp").setup({
 						color_square_width = 2,
@@ -130,8 +128,14 @@ M.plugins = {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"Hoffs/omnisharp-extended-lsp.nvim", -- for omnisharp decompile
-			"Decodetalkers/csharpls-extended-lsp.nvim", -- for charp_ls decompile
+			{
+				"Hoffs/omnisharp-extended-lsp.nvim", -- for omnisharp decompile
+				ft = "cs",
+			},
+			-- {
+			-- 	"Decodetalkers/csharpls-extended-lsp.nvim", -- for charp_ls decompile
+			-- 	ft = "cs",
+			-- },
 			"ray-x/lsp_signature.nvim",
 		},
 		config = require("services.lspconfig"),
@@ -257,10 +261,11 @@ M.plugins = {
 	},
 
 	{
-		"ggandor/leap.nvim",
-		event = { "BufReadPost", "BufAdd", "BufNewFile" },
+		"phaazon/hop.nvim",
+		branch = "v2", -- optional but strongly recommended
 		config = function()
-			require("leap").add_default_mappings()
+			-- you can configure Hop the way you like here; see :h hop-config
+			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
 		end,
 	},
 
@@ -350,6 +355,20 @@ M.plugins = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
 		},
+	},
+
+	-- rust
+	{
+		"simrat39/rust-tools.nvim",
+		ft = "rust",
+		config = require("tools.rust-tools"),
+	},
+	{
+		"rust-lang/rust.vim",
+		ft = "rust",
+		init = function()
+			vim.g.rustfmt_autosave = 1
+		end,
 	},
 }
 
