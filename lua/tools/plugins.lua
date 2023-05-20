@@ -82,10 +82,17 @@ return {
 		end,
 	},
 
+	-- move
 	{
 		"phaazon/hop.nvim",
 		branch = "v2", -- optional but strongly recommended
 		config = require("tools.hop"),
+	},
+	{
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
 	},
 
 	-- telescopte
