@@ -45,6 +45,7 @@ g.code_hight_servers = {
 	"c_sharp",
 	"rust",
 	"sql",
+	"cpp",
 }
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
@@ -65,6 +66,7 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"prismals",
 	"rust_analyzer",
 	"gopls",
+	"clangd",
 }
 
 -- register formatting and diagnostics server
@@ -78,6 +80,7 @@ g.null_ls_servers = {
 	"rustfmt", -- rust formatter
 	"prismaFmt",
 	"gofmt",
+	"clang_format",
 }
 
 -- register debuger server

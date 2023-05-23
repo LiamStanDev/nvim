@@ -1,5 +1,6 @@
 return function()
 	local servers = require("core").null_ls_servers
+	local helper = require("null-ls.helpers") -- null-ls helper library
 
 	require("mason-null-ls").setup({
 		ensure_installed = servers,
@@ -19,6 +20,7 @@ return function()
 					extra_filetypes = { "toml" },
 				})
 			end
+
 			table.insert(sources, formatter_set)
 		end
 

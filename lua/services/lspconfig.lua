@@ -78,7 +78,6 @@ return function()
 			},
 		},
 	}
-	capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities) -- add to cmp
 
 	-- auto register lsp service
 	for _, server in ipairs(servers) do
@@ -90,6 +89,11 @@ return function()
 		local require_ok, conf_opts = pcall(require, "services.lsp-settings." .. server) -- for the settings folder
 		if require_ok then
 			opts = vim.tbl_deep_extend("force", conf_opts, opts)
+		end
+
+		-- fix muti offset when using clangd and clang-format
+		if server == "clangd" then
+			capabilities.offsetEncoding = { "utf-16" }
 		end
 
 		require("lspconfig")[server].setup(opts)
