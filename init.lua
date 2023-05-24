@@ -60,12 +60,12 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"docker_compose_language_service",
 	"taplo", -- toml lsp
 	"lemminx", -- xml lsp
-	-- "tailwindcss",
-	-- "omnisharp",
-	-- "rust_analyzer",
+	"tailwindcss",
+	"omnisharp",
+	"rust_analyzer",
 	-- "prismals",
-	-- "gopls",
-	"clangd",
+	"gopls",
+	-- "clangd",
 }
 
 -- register formatting and diagnostics server
@@ -74,7 +74,7 @@ g.null_ls_servers = {
 	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
-	-- "csharpier", -- csharp formatter
+	"csharpier", -- csharp formatter
 	"eslint_d",
 	"rustfmt", -- rust formatter
 	"prismaFmt",
@@ -87,7 +87,7 @@ g.dap_servers = {
 	"python",
 	"cppdbg",
 	"coreclr", -- csharp
-	"codelldb",
+	-- "codelldb",
 	"delve", -- go
 }
 
