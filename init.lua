@@ -76,19 +76,19 @@ g.null_ls_servers = {
 	"beautysh", -- bash formatter
 	-- "csharpier", -- csharp formatter
 	"eslint_d",
-	-- "rustfmt", -- rust formatter
-	-- "prismaFmt",
-	-- "gofmt",
-	"clang_format",
+	"rustfmt", -- rust formatter
+	"prismaFmt",
+	"gofmt",
+	-- "clang_format",
 }
 
 -- register debuger server
 g.dap_servers = {
 	"python",
 	"cppdbg",
-	-- "coreclr", -- csharp
-	-- "codelldb",
-	-- "delve", -- go
+	"coreclr", -- csharp
+	"codelldb",
+	"delve", -- go
 }
 
 -- setup all plugin

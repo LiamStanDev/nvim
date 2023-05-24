@@ -53,6 +53,7 @@ return function()
 			client.server_capabilities.documentRangeFormattingProvider = false
 			client.resolved_capabilities.document_formatting = false
 		end
+
 		if client.name == "omnisharp" then
 			client.server_capabilities.semanticTokensProvider = nil
 		end
