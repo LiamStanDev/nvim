@@ -42,6 +42,8 @@ g.code_hight_servers = {
 	"vim",
 	"dockerfile",
 	"gitignore",
+	"cpp",
+	"cmake",
 	"c_sharp",
 	"rust",
 	"sql",
@@ -65,7 +67,7 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"rust_analyzer",
 	-- "prismals",
 	"gopls",
-	-- "clangd",
+	"clangd",
 }
 
 -- register formatting and diagnostics server
