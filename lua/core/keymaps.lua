@@ -10,6 +10,11 @@ local insert_mode = {
 	["<A-j>"] = "<Esc>:m .+1<CR>==gi",
 	-- Move current line / block with Alt-j/k ala vscode.
 	["<A-k>"] = "<Esc>:m .-2<CR>==gi",
+
+	["<C-j>"] = "<C-o>j",
+	["<C-h>"] = "<C-o>h",
+	["<C-k>"] = "<C-o>k",
+	["<C-l>"] = "<C-o>l",
 }
 
 local normal_mode = {
