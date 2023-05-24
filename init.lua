@@ -11,8 +11,8 @@ g.navigator_on = true
 g.dashboard_logo = "AstronautSmall"
 
 -- border style
-g.cmp_window_border = "rounded" -- none, single, rounded
-g.which_key_window_border = "rounded" -- none, single, double, shadow
+g.cmp_window_border = "single" -- none, single, rounded
+g.which_key_window_border = "single" -- none, single, double, shadow
 
 -- show inline hint
 g.open_type_hint = true -- for variable
@@ -49,10 +49,7 @@ g.code_hight_servers = {
 }
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
-	"tsserver",
-	"tailwindcss",
-	"omnisharp",
-	"rust_analyzer",
+	-- "tsserver",
 	"html",
 	"jsonls",
 	"lua_ls",
@@ -63,9 +60,11 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"docker_compose_language_service",
 	"taplo", -- toml lsp
 	"lemminx", -- xml lsp
-	"prismals",
-	"rust_analyzer",
-	"gopls",
+	-- "tailwindcss",
+	-- "omnisharp",
+	-- "rust_analyzer",
+	-- "prismals",
+	-- "gopls",
 	"clangd",
 }
 
@@ -76,8 +75,7 @@ g.null_ls_servers = {
 	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
-	"csharpier", -- csharp formatter
-	-- "eslint",
+	-- "csharpier", -- csharp formatter
 	"eslint_d",
 	"rustfmt", -- rust formatter
 	"prismaFmt",
@@ -87,10 +85,10 @@ g.null_ls_servers = {
 
 -- register debuger server
 g.dap_servers = {
-	"coreclr", -- csharp
 	"python",
+	"cppdbg",
+	"coreclr", -- csharp
 	"codelldb",
-	-- "cppdbg",
 	"delve", -- go
 }
 

@@ -20,6 +20,11 @@ return function()
 					extra_filetypes = { "toml" },
 				})
 			end
+			if server == "clang_format" then
+				formatter_set = formatter.with({
+					disabled_filetypes = { "cs", "json", "java", "javascript" },
+				})
+			end
 
 			table.insert(sources, formatter_set)
 		end

@@ -51,8 +51,9 @@ return function()
 		if client.name ~= "lemminx" and client.name ~= "rust_analyzer" then
 			client.server_capabilities.documentFormattingProvider = false
 			client.server_capabilities.documentRangeFormattingProvider = false
-			client.resolved_capabilities.document_formatting = false
+			-- client.resolved_capabilities.document_formatting = false -- Note: the following make semantic token very wier Do use!!!
 		end
+
 		if client.name == "omnisharp" then
 			client.server_capabilities.semanticTokensProvider = nil
 		end
