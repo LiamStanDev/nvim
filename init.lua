@@ -79,7 +79,7 @@ g.null_ls_servers = {
 	"rustfmt", -- rust formatter
 	"prismaFmt",
 	"gofmt",
-	-- "clang_format",
+	"clang_format",
 }
 
 -- register debuger server
