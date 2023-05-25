@@ -126,4 +126,7 @@ return {
 		end,
 		ft = { "markdown" }, -- load at markdown file type
 	},
+
+	-- nvim api documentation, and cmp
+	{ "folke/neodev.nvim", opts = {} },
 }
