@@ -51,12 +51,13 @@ g.code_hight_servers = {
 }
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
-	-- "tsserver",
+	"tsserver",
 	"html",
 	"jsonls",
 	"lua_ls",
 	"cssls",
-	"pylsp", -- python lsp
+	-- "pylsp", -- python lsp
+	"pyright",
 	"bashls",
 	"dockerls",
 	"docker_compose_language_service",
@@ -76,7 +77,6 @@ g.null_ls_servers = {
 	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
-	-- "csharpier", -- csharp formatter
 	"eslint_d",
 	"rustfmt", -- rust formatter
 	"prismaFmt",
@@ -89,7 +89,7 @@ g.dap_servers = {
 	"python",
 	"cppdbg",
 	"coreclr", -- csharp
-	-- "codelldb",
+	"codelldb",
 	"delve", -- go
 }
 
