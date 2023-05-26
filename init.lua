@@ -76,7 +76,7 @@ g.null_ls_servers = {
 	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
-	"csharpier", -- csharp formatter
+	-- "csharpier", -- csharp formatter
 	"eslint_d",
 	"rustfmt", -- rust formatter
 	"prismaFmt",
