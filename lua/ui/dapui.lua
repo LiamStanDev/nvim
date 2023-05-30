@@ -1,5 +1,10 @@
 return function()
 	local dapui = require("dapui")
+	-- see: https://github.com/rcarriga/nvim-dap-ui
+	require("neodev").setup({
+		library = { plugins = { "nvim-dap-ui" }, types = true },
+	})
+
 	dapui.setup({
 		icons = { expanded = "", collapsed = "", circular = "" },
 		mappings = {
@@ -32,7 +37,7 @@ return function()
 					},
 				},
 				position = "right",
-				size = 35,
+				size = 40,
 			},
 			{
 				elements = {
@@ -52,7 +57,7 @@ return function()
 		floating = {
 			max_height = 0.9,
 			max_width = 0.5, -- Floats will be treated as percentage of your screen.
-			border = "rounded", -- Border style. Can be 'single', 'double' or 'rounded'
+			border = "single", -- Border style. Can be 'single', 'double' or 'rounded'
 			mappings = {
 				close = { "q", "<Esc>" },
 			},

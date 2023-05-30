@@ -61,11 +61,6 @@ return {
 
 	-- rust
 	{
-		"simrat39/rust-tools.nvim",
-		ft = "rust",
-		config = require("tools.rust-tools"),
-	},
-	{
 		"rust-lang/rust.vim",
 		ft = "rust",
 		init = function()
@@ -88,12 +83,12 @@ return {
 		branch = "v2", -- optional but strongly recommended
 		config = require("tools.hop"),
 	},
-	{
-		"ggandor/leap.nvim",
-		config = function()
-			require("leap").add_default_mappings()
-		end,
-	},
+	-- {
+	-- 	"ggandor/leap.nvim",
+	-- 	config = function()
+	-- 		require("leap").add_default_mappings()
+	-- 	end,
+	-- },
 
 	-- telescopte
 	{
@@ -126,4 +121,7 @@ return {
 		end,
 		ft = { "markdown" }, -- load at markdown file type
 	},
+
+	-- nvim api documentation, and cmp
+	{ "folke/neodev.nvim", opts = {} },
 }

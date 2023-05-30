@@ -42,6 +42,8 @@ g.code_hight_servers = {
 	"vim",
 	"dockerfile",
 	"gitignore",
+	"cpp",
+	"cmake",
 	"c_sharp",
 	"rust",
 	"sql",
@@ -49,22 +51,23 @@ g.code_hight_servers = {
 }
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
-	-- "tsserver",
+	"tsserver",
 	"html",
 	"jsonls",
 	"lua_ls",
 	"cssls",
-	"pylsp", -- python lsp
+	-- "pylsp", -- python lsp
+	"pyright",
 	"bashls",
 	"dockerls",
 	"docker_compose_language_service",
 	"taplo", -- toml lsp
 	"lemminx", -- xml lsp
-	-- "tailwindcss",
-	-- "omnisharp",
-	-- "rust_analyzer",
+	"tailwindcss",
+	"omnisharp",
+	"rust_analyzer",
 	-- "prismals",
-	-- "gopls",
+	"gopls",
 	"clangd",
 }
 
@@ -75,7 +78,6 @@ g.null_ls_servers = {
 	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
-	-- "csharpier", -- csharp formatter
 	"eslint_d",
 	"rustfmt", -- rust formatter
 	"prismaFmt",
@@ -85,11 +87,11 @@ g.null_ls_servers = {
 
 -- register debuger server
 g.dap_servers = {
-	"python",
-	"cppdbg",
+	-- "python",
+	-- "cppdbg",
 	"coreclr", -- csharp
 	"codelldb",
-	"delve", -- go
+	-- "delve", -- go
 }
 
 -- setup all plugin

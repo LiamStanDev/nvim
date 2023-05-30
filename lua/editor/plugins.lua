@@ -31,7 +31,7 @@ return {
 	-- cmp
 	{
 		"hrsh7th/nvim-cmp",
-		version = false, -- last release is way too old
+		-- version = false, -- last release is way too old
 		event = "InsertEnter",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
@@ -40,6 +40,7 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"hrsh7th/cmp-nvim-lua",
 			"hrsh7th/cmp-emoji",
+			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-calc",
 			"rcarriga/cmp-dap",
 			{
@@ -63,7 +64,7 @@ return {
 		config = require("editor.nvim-cmp"),
 	},
 
-	-- -- treesitter
+	-- treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
 		version = false, -- last release is way too old and doesn't work on Windows
@@ -77,4 +78,7 @@ return {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 	},
+
+	-- navigator with tmux
+	"christoomey/vim-tmux-navigator",
 }

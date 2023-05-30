@@ -24,16 +24,16 @@ end
 M.config = function()
 	local servers = require("core").dap_servers
 
-	require("dap")
 	require("mason-nvim-dap").setup({
 		ensure_installed = servers,
 		automatic_installation = true,
-		handlers = {
-			function(config)
-				require("mason-nvim-dap").default_setup(config)
-			end,
-		},
+		-- handlers = {
+		-- 	function(config)
+		-- 		require("mason-nvim-dap").default_setup(config)
+		-- 	end,
+		-- },
 	})
+
 	require("nvim-dap-virtual-text").setup({
 		enabled = true, -- enable this plugin (the default)
 		enabled_commands = true, -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
@@ -54,6 +54,8 @@ M.config = function()
 		virt_text_win_col = nil, -- position the virtual text at a fixed window column (starting from the first text column) ,
 		-- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
 	})
+	require("services.dap-settings.dap-adaptor-setup")
+	require("services.dap-settings.dap-lang-setup")
 end
 
 return M
