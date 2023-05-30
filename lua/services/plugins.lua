@@ -36,21 +36,18 @@ return {
 	-- dap
 	{
 		"mfussenegger/nvim-dap",
-		event = "VeryLazy",
+		event = "BufReadPre",
 		dependencies = {
 			"jay-babu/mason-nvim-dap.nvim",
 			"theHamsta/nvim-dap-virtual-text",
+
+			{
+				"rcarriga/nvim-dap-ui",
+				config = require("ui.dapui"),
+			},
+			"mfussenegger/nvim-dap-python",
 		},
 		init = require("services.dap").init,
 		config = require("services.dap").config,
-	},
-	{
-		"rcarriga/nvim-dap-ui",
-		event = "VeryLazy",
-		dependencies = {
-			"mfussenegger/nvim-dap",
-			"jay-babu/mason-nvim-dap.nvim",
-		},
-		config = require("ui.dapui"),
 	},
 }
