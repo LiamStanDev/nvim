@@ -86,11 +86,11 @@ g.null_ls_servers = {
 
 -- register debuger server
 g.dap_servers = {
-	"python",
-	"cppdbg",
+	-- "python",
+	-- "cppdbg",
 	"coreclr", -- csharp
 	"codelldb",
-	"delve", -- go
+	-- "delve", -- go
 }
 
 -- setup all plugin
