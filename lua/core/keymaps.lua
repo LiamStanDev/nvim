@@ -18,16 +18,15 @@ local insert_mode = {
 
 local normal_mode = {
 	-- Quick Curser
-	["<S-j>"] = "5j",
-	["<S-k>"] = "5k",
 	["<S-l>"] = "$",
 	["<S-h>"] = "^",
 
-	-- Better window movement
-	["<C-h>"] = "<C-w>h",
-	["<C-j>"] = "<C-w>j",
-	["<C-k>"] = "<C-w>k",
-	["<C-l>"] = "<C-w>l",
+	-- using tmux navigator
+	-- -- Better window movement
+	-- ["<C-h>"] = "<C-w>h",
+	-- ["<C-j>"] = "<C-w>j",
+	-- ["<C-k>"] = "<C-w>k",
+	-- ["<C-l>"] = "<C-w>l",
 
 	-- Resize with arrows
 	["<C-Up>"] = ":resize -2<CR>",
