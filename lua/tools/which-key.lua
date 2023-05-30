@@ -94,11 +94,7 @@ return function()
 			r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
 			s = {
 				function()
-					if vim.api.nvim_buf_get_option(0, "filetype") == "rust" then
-						vim.api.nvim_command("RustDebuggables")
-					else
-						vim.api.nvim_command("lua require'dap'.continue()")
-					end
+					vim.api.nvim_command("lua require'dap'.continue()")
 				end,
 				"Start",
 			},
