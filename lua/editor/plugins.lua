@@ -63,7 +63,7 @@ return {
 		config = require("editor.nvim-cmp"),
 	},
 
-	-- -- treesitter
+	-- treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
 		version = false, -- last release is way too old and doesn't work on Windows
@@ -77,4 +77,7 @@ return {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 	},
+
+	-- navigator with tmux
+	"christoomey/vim-tmux-navigator",
 }
