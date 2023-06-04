@@ -12,17 +12,6 @@ return {
 				invocationLocation = "workspace",
 				extraArgs = {},
 			},
-			cargo = {
-				allFeatures = true,
-			},
-			inlayHints = {
-				closureCaptureHints = {
-					enable = true,
-				},
-				closureReturnTypeHints = {
-					enable = true,
-				},
-			},
 		},
 	},
 }

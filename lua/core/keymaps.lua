@@ -4,7 +4,7 @@ local keymap = vim.api.nvim_set_keymap
 local opts_general = { noremap = true, silent = true }
 
 local insert_mode = {
-	["kj"] = "<Esc>",
+	-- ["kj"] = "<Esc>",
 	-- Move current line / block with Alt-j/k ala vscode.
 	["<A-j>"] = "<Esc>:m .+1<CR>==gi",
 	-- Move current line / block with Alt-j/k ala vscode.
