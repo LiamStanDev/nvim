@@ -45,10 +45,9 @@ return {
 			"rcarriga/cmp-dap",
 			{
 				"L3MON4D3/LuaSnip",
-				version = "<CurrentMajor>.*",
-				dependencies = {
-					"rafamadriz/friendly-snippets",
-				},
+				version = "1.2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+				-- install jsregexp (optional!).
+				build = "make install_jsregexp",
 				config = require("editor.luasnippet"),
 			},
 			{
