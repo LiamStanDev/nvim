@@ -12,6 +12,10 @@
       {
         "language": "cs",
         "path": "./cs.json"
+      },
+      {
+        "language": "rust",
+        "path": "./rust.json"
       }
     ]
   }
