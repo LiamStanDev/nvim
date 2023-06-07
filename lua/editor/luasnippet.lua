@@ -17,20 +17,20 @@ return function()
 	luasnip.filetype_extend("typescriptreact", { "html" })
 
 	require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets/" } })
-	require("luasnip.loaders.from_vscode").load({ exclude = { "typescriptreact", "cs" } })
+	require("luasnip.loaders.from_vscode").load({ exclude = { "typescriptreact", "cs", "rust" } })
 
 	-- key map
 	local keymap = vim.keymap.set
 	-- next
-	keymap({ "i", "s" }, "<C-.>", function()
-		if luasnip.expand_or_jumpable() then
-			luasnip.expand_or_jump()
+	keymap({ "i", "s" }, "<A-.>", function()
+		if luasnip.jumpable(1) then
+			luasnip.jump(1)
 		end
-	end)
+	end, { noremap = true, silent = true })
 	-- prev
-	keymap({ "i", "s" }, "<C-,>", function()
+	keymap({ "i", "s" }, "<A-,>", function()
 		if luasnip.jumpable(-1) then
 			luasnip.jump(-1)
 		end
-	end)
+	end, { noremap = true, silent = true })
 end
