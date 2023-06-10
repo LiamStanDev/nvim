@@ -30,7 +30,9 @@ return function()
 		-- Format
 		vim.cmd([[command! Format execute "lua vim.lsp.buf.format({ async = true })" ]]) -- Format command
 		-- formatting before save
-		vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
+		if client.name ~= "rust_analyzer" then
+			vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format({async = true})]])
+		end
 
 		-- add some plugin
 		require("lsp-inlayhints").on_attach(client, bufnr)
