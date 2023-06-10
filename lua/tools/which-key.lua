@@ -79,20 +79,20 @@ return function()
 		},
 		d = {
 			name = "Debug",
-			k = { "<Cmd>lua require('dapui').eval()<CR>", "Evaluate Expression" },
-			t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+			-- e = { "<Cmd>lua require('dapui').eval()<CR>", "Evaluate Expression" },
+			b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
 			l = { "<cmd>:Telescope dap list_breakpoints<cr>", "List Breakpoints" },
-			b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
+			-- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
 			c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
-			C = { "<cmd>:Telescope dap configurations<cr>", "Run To Cursor" },
+			-- C = { "<cmd>:Telescope dap configurations<cr>", "Run To Cursor" },
 			q = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
-			g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
-			i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
-			o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
-			O = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+			-- g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
+			s = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+			n = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+			o = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
 			p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
-			r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
-			s = {
+			-- t = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Dap Terminal" },
+			r = {
 				function()
 					vim.api.nvim_command("lua require'dap'.continue()")
 				end,
