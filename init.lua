@@ -77,8 +77,7 @@ g.null_ls_servers = {
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
 	"eslint_d",
-	"rustfmt", -- rust formatter
-	"prismaFmt",
+	-- "prismaFmt",
 	"gofmt",
 	"clang_format",
 }
