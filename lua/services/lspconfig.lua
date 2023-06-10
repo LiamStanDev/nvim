@@ -47,8 +47,14 @@ return function()
 		vim.keymap.set({ "n" }, "<Leader>k", function()
 			vim.lsp.buf.signature_help()
 		end, { silent = true, noremap = true, desc = "toggle signature" })
+
 		-- remove server formatter
-		if client.name ~= "lemminx" and client.name ~= "omnisharp" then
+		local server_builtin_formatter_needed = {
+			"lemminx",
+			"omnisharp",
+			"rust_analyzer",
+		}
+		if not server_builtin_formatter_needed[client.name] then
 			client.server_capabilities.documentFormattingProvider = false
 			client.server_capabilities.documentRangeFormattingProvider = false
 			-- client.resolved_capabilities.document_formatting = false -- Note: the following make semantic token very wier Do use!!!
