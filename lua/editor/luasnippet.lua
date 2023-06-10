@@ -24,7 +24,7 @@ return function()
 	-- next
 	keymap({ "i", "s" }, "<A-.>", function()
 		if luasnip.jumpable(1) then
-			luasnip.jump(1)
+			luasnip.expand_or_jump(1)
 		end
 	end, { noremap = true, silent = true })
 	-- prev
