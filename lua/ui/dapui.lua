@@ -19,39 +19,39 @@ return function()
 		layouts = {
 			{
 				elements = {
+					-- {
+					-- 	id = "scopes",
+					-- 	size = 0.2,
+					-- },
 					{
-						id = "scopes",
+						id = "watches",
 						size = 0.4,
 					},
 					{
 						id = "breakpoints",
-						size = 0.15,
+						size = 0.2,
 					},
 					{
 						id = "stacks",
 						size = 0.2,
 					},
 					{
-						id = "watches",
-						size = 0.25,
+						id = "console",
+						size = 0.2,
 					},
 				},
 				position = "right",
-				size = 40,
+				size = 60,
 			},
 			{
 				elements = {
 					{
 						id = "repl",
-						size = 0.5,
-					},
-					{
-						id = "console",
-						size = 0.5,
+						size = 1.0,
 					},
 				},
 				position = "bottom",
-				size = 10,
+				size = 20,
 			},
 		},
 		floating = {
