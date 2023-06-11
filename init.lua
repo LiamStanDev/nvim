@@ -88,7 +88,7 @@ g.dap_servers = {
 	-- "cppdbg",
 	"coreclr", -- csharp
 	"codelldb",
-	-- "delve", -- go
+	"delve", -- go
 }
 
 -- setup all plugin
