@@ -31,7 +31,7 @@ return function()
 		vim.cmd([[command! Format execute "lua vim.lsp.buf.format({ async = true })" ]]) -- Format command
 		-- formatting before save
 		if client.name ~= "rust_analyzer" then
-			vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format({async = true})]])
+			vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 		end
 
 		-- add some plugin
