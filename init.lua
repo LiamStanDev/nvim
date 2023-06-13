@@ -55,8 +55,8 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"jsonls",
 	"lua_ls",
 	"cssls",
-	-- "pylsp", -- python lsp
-	"pyright",
+	"pylsp", -- python lsp
+	-- "pyright",
 	"bashls",
 	"dockerls",
 	"docker_compose_language_service",
