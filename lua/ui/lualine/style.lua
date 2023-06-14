@@ -1,5 +1,4 @@
 local component = require("ui.lualine.component")
-
 local M = {
 	options = {
 		icons_enabled = true,
@@ -19,7 +18,7 @@ local M = {
 	sections = {
 		lualine_a = {
 			component.custom_icons,
-			component.modes,
+			-- component.modes,
 		},
 		lualine_b = {},
 		lualine_c = {
@@ -30,7 +29,7 @@ local M = {
 				icon_only = true,
 				colored = true,
 				padding = 1,
-				color = { bg = "#2a2c3f" },
+				color = { bg = "#2a2c3f", fg = "#BDCBD6" },
 				separator = { left = "", right = " " },
 			},
 			{
@@ -38,7 +37,11 @@ local M = {
 				file_status = false,
 				padding = 0.3,
 				separator = { left = "", right = " " },
-				color = { bg = "#2a2c3f" },
+				symbols = {
+					modified = "", -- Text to show when the file is modified.
+					readonly = "", -- Text to show when the file is non-modifiable or readonly.
+				},
+				color = { bg = "#2a2c3f", fg = "#BDCBD6" },
 			},
 			component.branch,
 			component.diff,
@@ -68,7 +71,7 @@ local M = {
 				icon_only = false,
 				colored = true,
 				padding = 1,
-				-- color = { bg = "#2a2c3f" },
+				color = { bg = "#2a2c3f", fg = "#BDCBD6" },
 				-- separator = { left = "", right = " " },
 			},
 			{
@@ -79,7 +82,10 @@ local M = {
 				color = { bg = "#86AAEC", fg = "#000000" },
 				padding = 0.1,
 			},
-			"progress",
+			{
+				"progress",
+				color = { bg = "#2a2c3f", fg = "#BDCBD6" },
+			},
 			-- component.location,
 		},
 		lualine_y = {},

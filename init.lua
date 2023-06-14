@@ -48,6 +48,7 @@ g.code_hight_servers = {
 	"sql",
 	"cpp",
 }
+
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"tsserver",

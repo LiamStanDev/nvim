@@ -172,7 +172,7 @@ local component = {
 
 	branch = {
 		"branch",
-		icon = "",
+		icon = "",
 		separator = { left = "", right = "" },
 		padding = 0.1,
 	},
@@ -181,9 +181,9 @@ local component = {
 		"diff",
 		colored = true,
 		symbols = {
-			added = " ",
-			modified = " ",
-			removed = " ",
+			added = " ",
+			modified = " ",
+			removed = " ",
 		},
 		separator = { left = "", right = "" },
 	},
@@ -200,7 +200,8 @@ local component = {
 	custom_icons = {
 		function()
 			-- return ""
-			return ""
+			-- return ""
+			return ""
 		end,
 		separator = { left = "", right = "" },
 	},
