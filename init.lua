@@ -27,7 +27,6 @@ g.filter_files = {
 	".DS_Store",
 	".vscode",
 }
-
 -- register tree-sitter code highlight
 g.code_hight_servers = {
 	"json",
@@ -49,6 +48,7 @@ g.code_hight_servers = {
 	"sql",
 	"cpp",
 }
+
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"tsserver",
@@ -56,8 +56,8 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"jsonls",
 	"lua_ls",
 	"cssls",
-	-- "pylsp", -- python lsp
-	"pyright",
+	"pylsp", -- python lsp
+	-- "pyright",
 	"bashls",
 	"dockerls",
 	"docker_compose_language_service",
@@ -79,8 +79,7 @@ g.null_ls_servers = {
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
 	"eslint_d",
-	"rustfmt", -- rust formatter
-	"prismaFmt",
+	-- "prismaFmt",
 	"gofmt",
 	"clang_format",
 }
@@ -91,7 +90,7 @@ g.dap_servers = {
 	-- "cppdbg",
 	"coreclr", -- csharp
 	"codelldb",
-	-- "delve", -- go
+	"delve", -- go
 }
 
 -- setup all plugin
