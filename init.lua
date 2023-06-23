@@ -51,45 +51,45 @@ g.code_hight_servers = {
 
 -- register lsp server for auto completion
 g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
-	"tsserver",
-	"html",
-	"jsonls",
-	"lua_ls",
-	"cssls",
-	"pylsp", -- python lsp
+	-- "tsserver",
+	-- "html",
+	-- "jsonls",
+	-- "lua_ls",
+	-- "cssls",
+	-- "pylsp", -- python lsp
 	-- "pyright",
 	"bashls",
-	"dockerls",
-	"docker_compose_language_service",
+	-- "dockerls",
+	-- "docker_compose_language_service",
 	"taplo", -- toml lsp
-	"lemminx", -- xml lsp
-	"tailwindcss",
-	"omnisharp",
+	-- "lemminx", -- xml lsp
+	-- "tailwindcss",
+	-- "omnisharp",
 	"rust_analyzer",
 	-- "prismals",
 	"gopls",
-	"clangd",
+	-- "clangd",
 }
 
 -- register formatting and diagnostics server
 g.null_ls_servers = {
 	"prettier",
-	"black", -- python formatter
+	-- "black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
-	"eslint_d",
+	-- "eslint_d",
 	-- "prismaFmt",
 	"gofmt",
-	"clang_format",
+	-- "clang_format",
 }
 
 -- register debuger server
 g.dap_servers = {
 	-- "python",
 	-- "cppdbg",
-	"coreclr", -- csharp
+	-- "coreclr", -- csharp
 	"codelldb",
-	"delve", -- go
+	-- "delve", -- go
 }
 
 -- setup all plugin
