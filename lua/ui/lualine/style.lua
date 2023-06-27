@@ -51,7 +51,8 @@ local M = {
 			component.lsp_progess,
 			{
 				function()
-					return "﬌"
+                    return "󱞩"
+					-- return "﬌"
 				end,
 				separator = { left = "", right = "" },
 				color = { bg = "#8FBCBB", fg = "#000000" },

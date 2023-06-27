@@ -167,7 +167,8 @@ return function()
 			w = { "<cmd>Trouble<CR>", "Workspace Diagnostics" },
 			-- l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 			-- q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
-			r = { "<cmd>Lspsaga rename ++project<cr>", "Rename" },
+			-- r = { "<cmd>Lspsaga rename ++project<CR>", "Rename" }, -- ++project still won't fix. see: https://github.com/nvimdev/lspsaga.nvim/issues/726
+			r = { "<cmd>Lspsaga rename<CR>", "Rename" },
 			-- s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 			-- S = {
 			-- 	"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
