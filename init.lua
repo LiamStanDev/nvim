@@ -29,34 +29,33 @@ config.filter_files = {
 }
 -- register tree-sitter code highlight
 config.code_hight_servers = {
-	-- "json",
-	-- "javascript",
-	-- "tsx",
-	-- "html",
+	"json",
+	"javascript",
+	"tsx",
+	"html",
 	-- "css",
-	-- "markdown",
-	-- "markdown_inline",
-	-- "bash",
-	-- "lua",
-	-- "vim",
-	-- "dockerfile",
-	-- "gitignore",
-	-- "cpp",
-	-- "cmake",
+	"markdown",
+	"markdown_inline",
+	"bash",
+	"lua",
+	"vim",
+	"dockerfile",
+	"gitignore",
+	"cpp",
+	"cmake",
 	-- "c_sharp",
-	-- "rust",
+	"rust",
 	-- "sql",
-	-- "cpp",
 }
 
 -- register lsp server for auto completion
 config.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
-	-- "tsserver",
-	-- "html",
-	-- "jsonls",
+	"tsserver",
+	"html",
+	"jsonls",
 	"lua_ls",
-	-- "cssls",
-	-- "pylsp", -- python lsp
+	"cssls",
+	"pylsp", -- python lsp
 	-- "pyright",
 	"bashls",
 	-- "dockerls",
@@ -68,19 +67,19 @@ config.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nv
 	"rust_analyzer",
 	-- "prismals",
 	"gopls",
-	-- "clangd",
+	"clangd",
 }
 
 -- register formatting and diagnostics server
 config.null_ls_servers = {
 	"prettier",
-	-- "black", -- python formatter
+	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
-	-- "eslint_d",
+	"eslint_d",
 	-- "prismaFmt",
 	"gofmt",
-	-- "clang_format",
+	"clang_format",
 }
 
 -- register debuger server
