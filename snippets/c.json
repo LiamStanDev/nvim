@@ -2,13 +2,13 @@
   "Starter Template": {
     "prefix": "st",
     "body": [
-      "#include <stdlib.h>",
-      "#include <stdio.h>",
+      "#include <cstdlib>",
+      "#include <cstdio>",
       "",
-      "int main(int argc, char *argv[])",
-      "{$0",
+      "int main(int argc, char *argv[]) {",
+      "\t$0",
       "",
-      "\treturn EXIT_SUCCESS;",
+      "\treturn 0;",
       "}"
     ],
     "description": "Standard starter template for a tiny C program"
