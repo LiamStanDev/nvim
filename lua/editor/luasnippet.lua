@@ -14,10 +14,10 @@ return function()
 	})
 
 	-- let one file can use multiple snippet sources.
-	luasnip.filetype_extend("typescriptreact", { "html" })
+	-- luasnip.filetype_extend("typescriptreact", { "html" })
 
 	require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets/" } })
-	require("luasnip.loaders.from_vscode").load({ exclude = { "typescriptreact", "cs", "rust" } })
+	-- require("luasnip.loaders.from_vscode").load({ exclude = { "typescriptreact", "cs", "rust" } })
 
 	-- key map
 	local keymap = vim.keymap.set

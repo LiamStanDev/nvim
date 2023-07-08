@@ -1,10 +1,17 @@
 return function()
 	-- add servers
 	local servers = require("core").lsp_servers
+	local server_fiter = {}
+	-- in asahi linux clangd can't download from mason
+	for _, server_name in pairs(servers) do
+		if server_name ~= "clangd" then
+			table.insert(server_fiter, server_name)
+		end
+	end
 	-- connected mason and lspconfig
 	require("mason-lspconfig").setup({
-		ensure_installed = servers,
-		automatic_installation = true,
+		ensure_installed = server_fiter,
+		-- automatic_installation = true,
 	})
 
 	-- set behavior for specific buffer

@@ -2,6 +2,17 @@
   "contributes": {
     "snippets": [
       {
+        "language": [
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "global",
+          "all"
+        ],
+        "path": "./global.json"
+      },
+      {
         "language": "rust",
         "path": "./rust.json"
       },
@@ -16,6 +27,53 @@
       {
         "language": "rust",
         "path": "./rust.json"
+      },
+      {
+        "language": [
+          "html",
+          "typescriptreact"
+        ],
+        "path": "./html.json"
+      },
+      {
+        "language": "c",
+        "path": "./c.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./cpp.json"
+      },
+      {
+        "language": "python",
+        "path": "./python.json"
+      },
+      {
+        "language": "cmake",
+        "path": "./cmake.json"
+      },
+      {
+        "language": [
+          "shellscript",
+          "shell",
+          "sh",
+          "zsh"
+        ],
+        "path": "./shell.json"
+      },
+      {
+        "language": [
+          "markdown",
+          "rmd"
+        ],
+        "path": "./markdown.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./docker/docker-compose.json"
+      },
+      {
+        "language": "make",
+        "path": "./make.json"
       }
     ]
   }

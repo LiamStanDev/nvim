@@ -49,6 +49,7 @@ return {
 				-- install jsregexp (optional!).
 				build = "make install_jsregexp",
 				config = require("editor.luasnippet"),
+				-- dependencies = { "rafamadriz/friendly-snippets" },
 			},
 			{
 				"roobert/tailwindcss-colorizer-cmp.nvim",

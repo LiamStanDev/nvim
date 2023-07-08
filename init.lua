@@ -1,39 +1,39 @@
 -- the core plugins
-local g = require("core")
+local config = require("core")
 
 -- set color theme here
-g.colorscheme = "onedark"
-g.transparent = true
+config.colorscheme = "onedark"
+
 -- whether to see navigator bar in the top
-g.navigator_on = true
+config.navigator_on = true
 
 -- set the logo. see ./lua/ui/style/header.lua
-g.dashboard_logo = "AstronautSmall"
+config.dashboard_logo = "AstronautSmall"
 
 -- border style
-g.cmp_window_border = "single" -- none, single, rounded
-g.which_key_window_border = "single" -- none, single, double, shadow
+config.cmp_window_border = "single" -- none, single, rounded
+config.which_key_window_border = "single" -- none, single, double, shadow
 
 -- show inline hint
-g.open_type_hint = true -- for variable
-g.open_parameter_hint = false
+config.open_type_hint = true -- for variable
+config.open_parameter_hint = false
 
 -- completion menu with text
-g.cmp_kind_text = true
+config.cmp_kind_text = true
 
 -- file filter for explorer(only for dotfiles)
-g.filter_files = {
+config.filter_files = {
 	".git",
 	".DS_Store",
 	".vscode",
 }
 -- register tree-sitter code highlight
-g.code_hight_servers = {
+config.code_hight_servers = {
 	"json",
 	"javascript",
 	"tsx",
 	"html",
-	"css",
+	-- "css",
 	"markdown",
 	"markdown_inline",
 	"bash",
@@ -43,14 +43,13 @@ g.code_hight_servers = {
 	"gitignore",
 	"cpp",
 	"cmake",
-	"c_sharp",
+	-- "c_sharp",
 	"rust",
-	"sql",
-	"cpp",
+	-- "sql",
 }
 
 -- register lsp server for auto completion
-g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
+config.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"tsserver",
 	"html",
 	"jsonls",
@@ -59,12 +58,12 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 	"pylsp", -- python lsp
 	-- "pyright",
 	"bashls",
-	"dockerls",
-	"docker_compose_language_service",
+	-- "dockerls",
+	-- "docker_compose_language_service",
 	"taplo", -- toml lsp
-	"lemminx", -- xml lsp
-	"tailwindcss",
-	"omnisharp",
+	-- "lemminx", -- xml lsp
+	-- "tailwindcss",
+	-- "omnisharp",
 	"rust_analyzer",
 	-- "prismals",
 	"gopls",
@@ -72,9 +71,8 @@ g.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nvim
 }
 
 -- register formatting and diagnostics server
-g.null_ls_servers = {
-	"prettierd",
-	-- "prettier",
+config.null_ls_servers = {
+	"prettier",
 	"black", -- python formatter
 	"stylua", -- lua formatter
 	"beautysh", -- bash formatter
@@ -85,12 +83,12 @@ g.null_ls_servers = {
 }
 
 -- register debuger server
-g.dap_servers = {
+config.dap_servers = {
 	-- "python",
 	-- "cppdbg",
-	"coreclr", -- csharp
+	-- "coreclr", -- csharp
 	"codelldb",
-	"delve", -- go
+	-- "delve", -- go
 }
 
 -- setup all plugin
