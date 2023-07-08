@@ -69,7 +69,11 @@
       },
       {
         "language": "yaml",
-        "path": "./snippets/docker/docker-compose.json"
+        "path": "./docker/docker-compose.json"
+      },
+      {
+        "language": "make",
+        "path": "./make.json"
       }
     ]
   }
