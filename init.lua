@@ -60,7 +60,7 @@ config.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nv
 	"bashls",
 	-- "dockerls",
 	-- "docker_compose_language_service",
-	"taplo", -- toml lsp
+	-- "taplo", -- toml lsp
 	-- "lemminx", -- xml lsp
 	-- "tailwindcss",
 	-- "omnisharp",
