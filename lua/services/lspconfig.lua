@@ -69,9 +69,10 @@ return function()
 			-- client.resolved_capabilities.document_formatting = false -- Note: the following make semantic token very wier Do use!!!
 		end
 
-		if client.name == "omnisharp" then
-			client.server_capabilities.semanticTokensProvider = nil
-		end
+		-- this bug is fixed
+		-- if client.name == "omnisharp" then
+		-- 	client.server_capabilities.semanticTokensProvider = nil
+		-- end
 	end
 
 	-- capabilities

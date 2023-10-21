@@ -33,7 +33,7 @@ config.code_hight_servers = {
 	"javascript",
 	"tsx",
 	"html",
-	-- "css",
+	"css",
 	"markdown",
 	"markdown_inline",
 	"bash",
@@ -43,9 +43,9 @@ config.code_hight_servers = {
 	"gitignore",
 	"cpp",
 	"cmake",
-	-- "c_sharp",
+	"c_sharp",
 	"rust",
-	-- "sql",
+	"sql",
 }
 
 -- register lsp server for auto completion
@@ -55,15 +55,15 @@ config.lsp_servers = { -- see https://github.com/williamboman/mason-lspconfig.nv
 	"jsonls",
 	"lua_ls",
 	"cssls",
-	"pylsp", -- python lsp
-	-- "pyright",
+	-- "pylsp", -- python lsp
+	"pyright",
 	"bashls",
-	-- "dockerls",
-	-- "docker_compose_language_service",
+	"dockerls",
+	"docker_compose_language_service",
 	-- "taplo", -- toml lsp
 	-- "lemminx", -- xml lsp
 	-- "tailwindcss",
-	-- "omnisharp",
+	"omnisharp",
 	"rust_analyzer",
 	-- "prismals",
 	"gopls",
@@ -84,9 +84,9 @@ config.null_ls_servers = {
 
 -- register debuger server
 config.dap_servers = {
-	-- "python",
-	-- "cppdbg",
-	-- "coreclr", -- csharp
+	"python",
+	"cppdbg",
+	"coreclr", -- csharp
 	"codelldb",
 	"delve", -- go
 }

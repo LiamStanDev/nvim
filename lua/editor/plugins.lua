@@ -17,6 +17,7 @@ return {
 	-- indnet line
 	{
 		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
 		event = { "BufReadPost", "BufNewFile" },
 		config = require("editor.indentline"),
 	},
