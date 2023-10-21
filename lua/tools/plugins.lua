@@ -39,15 +39,15 @@ return {
 	-- 	},
 	-- },
 
-	-- live-server
-	{
-		"aurum77/live-server.nvim",
-		build = function()
-			require("live_server.util").install()
-		end,
-		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
-		config = require("tools.live-server"),
-	},
+	-- -- live-server
+	-- {
+	-- 	"aurum77/live-server.nvim",
+	-- 	build = function()
+	-- 		require("live_server.util").install()
+	-- 	end,
+	-- 	cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+	-- 	config = require("tools.live-server"),
+	-- },
 
 	-- surround
 	{
@@ -113,14 +113,14 @@ return {
 	},
 
 	-- markdown preview
-	{
-		"iamcco/markdown-preview.nvim",
-		build = "cd app && npm install",
-		config = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" }, -- load at markdown file type
-	},
+	-- {
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	build = "cd app && npm install",
+	-- 	config = function()
+	-- 		vim.g.mkdp_filetypes = { "markdown" }
+	-- 	end,
+	-- 	ft = { "markdown" }, -- load at markdown file type
+	-- },
 
 	-- nvim api documentation, and cmp
 	{ "folke/neodev.nvim", opts = {} },
