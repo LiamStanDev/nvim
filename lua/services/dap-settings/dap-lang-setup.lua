@@ -21,6 +21,14 @@ dap.configurations.cs = {
 		cwd = "${fileDirname}",
 		program = utils.get_cs_dll,
 	},
+	-- https://stackoverflow.com/questions/77013544/error-on-attach-key-processid-not-found-when-trying-attach-neovim-dap-debu
+	{
+		name = "NetCoreDbg: Attach",
+		type = "coreclr",
+		request = "attach",
+		cwd = "${fileDirname}",
+		processId = require("dap.utils").pick_process,
+	},
 }
 
 -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
