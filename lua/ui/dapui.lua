@@ -20,12 +20,8 @@ return function()
 			{
 				elements = {
 					{
-						id = "scopes",
-						size = 0.2,
-					},
-					{
-						id = "watches",
-						size = 0.3,
+						id = "repl",
+						size = 5.0,
 					},
 					{
 						id = "breakpoints",
@@ -46,8 +42,12 @@ return function()
 			{
 				elements = {
 					{
-						id = "repl",
-						size = 1.0,
+						id = "scopes",
+						size = 0.5,
+					},
+					{
+						id = "watches",
+						size = 0.5,
 					},
 				},
 				position = "bottom",
